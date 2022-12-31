@@ -61,12 +61,12 @@ function WhatWeDo() {
           development space. From A to Z of building beautiful apps, we do
           everything in-house, GeekyAnts style.
         </div>
-        <div className="ease-in duration-300 bg-buttonColor p-2 rounded font-bold w-48 text-white px-9 mt-10 hover:flex hover:justify-between hover:px-6 cursor-pointer hover:ease-in hover:duration-300">
+        <div className="ease-in duration-300 bg-primaryButton p-2 rounded font-bold w-48 text-white px-9 mt-10 hover:flex hover:justify-between hover:px-6 cursor-pointer hover:ease-in hover:duration-300">
           LET&apos;S TALK
           <span>&#8594;</span>
         </div>
         <section>
-          <div className="mt-20 bg-amber-300">
+          <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-20">
               {data.map((item, index) => {
                 return <DetailsCard key={index} item={item} />;

@@ -27,18 +27,18 @@ function OurProducts() {
   return (
     <div className="flex h-auto full-width-container pt-20 bg-productBg text-white">
       <div className="m-auto">
-        <h2 className="font-bold text-5xl">What We Do Best</h2>
+        <h2 className="font-bold text-5xl">Open Source & Products</h2>
         <div className="font-light text-xl mt-10 max-w-6xl">
-          500+ projects deep and still going deeper in the Mobile & Web App
-          development space. From A to Z of building beautiful apps, we do
-          everything in-house, GeekyAnts style.
+          Made out of our love for experiments or out of sheer necessity to
+          solve problems in the development sphere, our open source
+          contributions and products are built for you.
         </div>
-        <div className="ease-in duration-300 bg-buttonColor p-2 rounded font-bold w-48 text-white px-9 mt-10 hover:flex hover:justify-between hover:px-6 cursor-pointer hover:ease-in hover:duration-300">
+        <div className="ease-in duration-300 bg-primaryButton p-2 rounded font-bold w-48 text-white px-9 mt-10 hover:flex hover:justify-between hover:px-6 cursor-pointer hover:ease-in hover:duration-300">
           LEARN MORE
           <span>&#8594;</span>
         </div>
         <section>
-          <div className="mt-20 bg-amber-300">
+          <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-20">
               {data.map((item, index) => {
                 return <DetailsCard key={index} item={item} />;
