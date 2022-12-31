@@ -14,6 +14,9 @@ module.exports = {
         primaryButton: "#CA0515",
         gray: "#808080",
         productBg: "#2A2B3B",
+        productText: "#C0C0C4",
+        meetupText: "#414141",
+        black300: "#343339",
       },
 
       keyframes: {

@@ -4,7 +4,7 @@ import GeekImage from "../../public/images/logo.svg";
 function Banner() {
   return (
     <section className="overflow-x-hidden relative">
-      <div className="container xl:mx-auto px-4 md:px-12 2xl:px-32 flex flex-col justify-center mt-28 md:mt-44">
+      <div className="container xl:mx-auto px-4 md:px-12 2xl:px-32 flex flex-col justify-center mt-28 md:mt-44 pb-28">
         <div className="z-10 leading-loose">
           <h1 className="text-6xl lg:text-8xl leading-tight font-extrabold animate-fade">
             Research.
@@ -62,31 +62,31 @@ function Banner() {
           </li>
 
           <li className="hidden lg:block">
-            <button className="p-2 mx-3 text-xl text-[#34333a] hover:text-primary transition-colors tracking-wider">
+            <button className="p-2 mx-3 text-xl text-[#34333a] hover:text-primary transition-colors tracking-wider hover:text-primaryButton">
               Products
             </button>
           </li>
 
           <li className="hidden lg:block">
-            <button className="p-2 mx-3 text-xl text-[#34333a] hover:text-primary transition-colors tracking-wider">
+            <button className="p-2 mx-3 text-xl text-[#34333a] hover:text-primary transition-colors tracking-wider hover:text-primaryButton">
               Services
             </button>
           </li>
 
           <li className="hidden lg:block">
-            <button className="p-2 mx-3 text-xl text-[#34333a] hover:text-primary transition-colors tracking-wider">
+            <button className="p-2 mx-3 text-xl text-[#34333a] hover:text-primary transition-colors tracking-wider hover:text-primaryButton">
               Our Work
             </button>
           </li>
 
           <li className="hidden lg:block">
-            <button className="p-2 mx-3 text-xl text-[#34333a] hover:text-primary transition-colors tracking-wider">
+            <button className="p-2 mx-3 text-xl text-[#34333a] hover:text-primary transition-colors tracking-wider hover:text-primaryButton">
               Solutions
             </button>
           </li>
 
           <li className="hidden lg:block">
-            <button className="p-2 text-lg text-[#34333a] hover:text-primary transition-colors tracking-wider">
+            <button className="p-2 text-lg text-[#34333a] hover:text-primary transition-colors tracking-wider hover:text-primaryButton">
               More
             </button>
           </li>
