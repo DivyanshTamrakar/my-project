@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../button/button";
 import ListItem from "../ListItem/listItem";
 
 function OurProducts() {
@@ -45,10 +46,7 @@ function OurProducts() {
           solve problems in the development sphere, our open source
           contributions and products are built for you.
         </div>
-        <div className="ease-in duration-300 bg-primaryButton p-2 rounded font-bold w-48 text-white px-9 mt-10 hover:flex hover:justify-between hover:px-6 cursor-pointer hover:ease-in hover:duration-300">
-          LEARN MORE
-          <span>&#8594;</span>
-        </div>
+        <Button text="LEARN MORE" />
         <section>
           <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-20">

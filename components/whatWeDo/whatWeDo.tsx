@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../button/button";
 import ListItem from "../ListItem/listItem";
 
 function WhatWeDo() {
@@ -63,11 +64,7 @@ function WhatWeDo() {
           development space. From A to Z of building beautiful apps, we do
           everything in-house, GeekyAnts style.
         </div>
-        <div className="w-40 ease-in duration-300 bg-primaryButton p-2 rounded font-bold text-white px-6 mt-10 hover:flex hover:justify-between hover:px-3 cursor-pointer ">
-          LET&apos;S TALK
-          <span>&#8594;</span>
-        </div>
-
+        <Button text="LET'S TALK" />
         <section>
           <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-16">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../button/button";
 import ImageCard from "../ListItem/card";
 
 function CommunityMeetups() {
@@ -36,10 +37,7 @@ function CommunityMeetups() {
           regular meetups (now virtual) to talk about the latest tech. We also
           attend tech conferences worldwide!
         </div>
-        <div className="ease-in duration-300 bg-primaryButton p-2 rounded font-bold w-48 text-white px-9 mt-14 hover:flex hover:justify-between hover:px-6 cursor-pointer hover:ease-in hover:duration-300">
-          LEARN MORE
-          <span>&#8594;</span>
-        </div>
+        <Button text="LEARN MORE" />
         <section>
           <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
