@@ -1,63 +1,65 @@
 import Image from "next/image";
 import React from "react";
 import GeekImage from "../../public/images/logo.svg";
-function Banner() {
+
+function Banner({ data }: { data: any }) {
   return (
     <section className="overflow-x-hidden relative">
       <div className="container xl:mx-auto px-4 md:px-12 2xl:px-32 flex flex-col justify-center mt-28 md:mt-44 pb-28">
         <div className="z-10 leading-loose">
           <h1 className="text-6xl lg:text-8xl leading-tight font-extrabold animate-fade">
-            Research.
+            {data.header[0]}
           </h1>
           <h1 className="text-6xl lg:text-8xl leading-tight font-extrabold animate-fade-slow">
-            Collaborate.
+            {data.header[1]}
           </h1>
           <h1 className="text-6xl lg:text-8xl leading-tight font-extrabold animate-fade-slower">
-            Build.
+            {data.header[2]}
           </h1>
         </div>
 
         <div className="text-2xl lg:text-4xl font-light lg:w-2/3 xl:w-1/2 2xl:w-2/5 mt-8 md:mt-20 z-10 !leading-normal">
-          Design & development studio turning ideas into
+          {data.subheading}
+
           <div className="inline pl-2.5 absolute">
             <span className="block whitespace-nowrap animate-slideIn overflow-hidden opacity-0">
-              mobile apps.
+              {data.options[0]}.
             </span>
           </div>
           <div className="inline pl-2.5 absolute">
             <span className="block whitespace-nowrap animate-slideIn-fast overflow-hidden opacity-0">
-              web apps.
+              {data.options[1]}.
             </span>
           </div>
           <div className="inline pl-2.5 absolute">
             <span className="block whitespace-nowrap animate-slideIn-normal overflow-hidden opacity-0">
-              solutions.
+              {data.options[2]}.
             </span>
           </div>
-          {/* reality */}
+
           <div className="inline pl-2.5 absolute">
             <span className="block whitespace-nowrap animate-slideIn-slow overflow-hidden opacity-0">
-              reality.
+              {data.options[3]}.
             </span>
           </div>
-          {/* open source */}
+
           <div className="inline pl-2.5 absolute">
             <span className="block whitespace-nowrap animate-slideIn-slower overflow-hidden opacity-0">
-              open source.
+              {data.options[4]}.
             </span>
           </div>
-          {/* apps */}
+
           <div className="inline pl-2.5 absolute">
             <span className="block whitespace-nowrap animate-slideIn-slowest overflow-hidden opacity-0">
-              apps.
+              {data.options[5]}.
             </span>
           </div>
         </div>
 
         <ul className="flex items-center mt-8 md:mt-24 2xl:mt-32">
           <li>
-            <button className="p-2 mr-3 px-6 md:px-10 rounded bg-primaryButton text-white text-sm md:text-base font-bold">
-              LET&apos;S TALK
+            <button className="p-2 uppercase mr-3 px-6 md:px-10 rounded bg-primaryButton text-white text-sm md:text-base font-bold">
+              {data.button}
             </button>
           </li>
 
