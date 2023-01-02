@@ -3,7 +3,6 @@ import Button from "../button/button";
 import ImageCard from "../ListItem/card";
 
 function CommunityMeetups({ data }: { data: any }) {
-  console.log(data);
   return (
     <section className="flex h-auto full-width-container bg-productBg text-white">
       <div className="m-auto py-28 pl-6 pr-2">

@@ -20,7 +20,6 @@ export const getStaticProps = async () => {
 };
 
 export default function Home(props: any) {
-  console.log(props);
   return (
     <>
       <main>
