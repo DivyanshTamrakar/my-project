@@ -2,39 +2,7 @@ import React, { useState } from "react";
 import Button from "../button/button";
 import ListItem from "../ListItem/listItem";
 
-function OurProducts() {
-  const [data, setData] = useState([
-    {
-      icon: "https://geekyants.com/images/product/builderx_new.svg",
-      heading: "BuilderX",
-      description: "Cloud based design tool that codes.",
-    },
-    {
-      icon: "https://geekyants.com/images/product/nativebase.svg",
-      heading: "NativeBase",
-      description: "UI Library for React Native & Vue Native",
-    },
-    {
-      icon: "https://geekyants.com/images/product/apibeats.svg",
-      heading: "apibeats",
-      description: "A battle-tested API maintenance platform",
-    },
-    {
-      icon: "https://geekyants.com/images/product/syncstate_new.svg",
-      heading: "SyncState",
-      description: "State Management for React",
-    },
-    {
-      icon: "https://geekyants.com/images/product/reactPluggable.svg",
-      heading: "React Pluggable",
-      description: "Add features without changing existing code",
-    },
-    {
-      icon: "https://geekyants.com/images/product/topgeek.svg",
-      heading: "Topgeek",
-      description: "Streamline evaluation, for companies and interviewees",
-    },
-  ]);
+function OurProducts({ data }: { data: any }) {
   return (
     <div className="flex h-auto full-width-container bg-productBg text-white">
       <div className="m-auto py-28 pl-6 pr-2">
@@ -50,8 +18,8 @@ function OurProducts() {
         <section>
           <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-20">
-              {data.map((item, index) => {
-                return <ListItem key={index} item={item} from="/ourProd" />;
+              {data.data.sourceProducts.map((item: any, index: number) => {
+                return <ListItem key={item.id} item={item} from="/ourProd" />;
               })}
             </div>
           </div>

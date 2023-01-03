@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 
 function ImageCard({ item }: any) {
-  console.log({ item });
   return (
     <div className="mt-2 flex justify-center cursor-pointer hover:mt-1 ease-out duration-300">
       <div className="rounded-lg shadow-lg bg-white max-w-sm">

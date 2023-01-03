@@ -2,57 +2,7 @@ import React, { useState } from "react";
 import Button from "../button/button";
 import ListItem from "../ListItem/listItem";
 
-function WhatWeDo() {
-  const [data, setData] = useState([
-    {
-      icon: "https://geekyants.com/images/services/ux-ui.svg",
-      heading: "UI / UX",
-      description:
-        " Unique designs for your product, guaranteed to be user-centric and a visual treat!",
-    },
-    {
-      icon: "https://geekyants.com/images/services/web3.svg",
-      heading: "Web3 @ GeekyAnts",
-      description:
-        "Start your journey into the new face of the web, with ultra-modern apps built in Web3 technology.",
-    },
-    {
-      icon: "https://geekyants.com/images/services/business.svg",
-      heading: "Business Analysis",
-      description:
-        "We discover, study and document business needs in collaboration with stakeholders and propose foolproof solutions that fit like a glove.",
-    },
-    {
-      icon: "https://geekyants.com/images/services/quality-assurance.svg",
-      heading: "Quality Assurance",
-      description:
-        "No compromise on the most important thing - the 'quality' of what we deliver. Exceeding your expectations is in our DNA.",
-    },
-    {
-      icon: "https://geekyants.com/images/services/ux-ui.svg",
-      heading: "UI / UX",
-      description:
-        " Unique designs for your product, guaranteed to be user-centric and a visual treat!",
-    },
-    {
-      icon: "https://geekyants.com/images/services/web3.svg",
-      heading: "Web3 @ GeekyAnts",
-      description:
-        "Start your journey into the new face of the web, with ultra-modern apps built in Web3 technology.",
-    },
-    {
-      icon: "https://geekyants.com/images/services/business.svg",
-      heading: "Business Analysis",
-      description:
-        "We discover, study and document business needs in collaboration with stakeholders and propose foolproof solutions that fit like a glove.",
-    },
-    {
-      icon: "https://geekyants.com/images/services/quality-assurance.svg",
-      heading: "Quality Assurance",
-      description:
-        "No compromise on the most important thing - the 'quality' of what we deliver. Exceeding your expectations is in our DNA.",
-    },
-  ]);
+function WhatWeDo({ data }: { data: any }) {
   return (
     <div className="flex h-auto full-width-container">
       <div className="m-auto py-28 pl-6 pr-2">
@@ -68,8 +18,8 @@ function WhatWeDo() {
         <section>
           <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-16">
-              {data.map((item, index) => {
-                return <ListItem key={index} item={item} from="/whatWeDo" />;
+              {data.data.work.map((item: any) => {
+                return <ListItem key={item.id} item={item} from="/whatWeDo" />;
               })}
             </div>
           </div>
