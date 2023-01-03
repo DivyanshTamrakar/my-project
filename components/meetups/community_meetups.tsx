@@ -5,8 +5,8 @@ import ImageCard from "../ListItem/card";
 
 function CommunityMeetups({ data }: { data: any }) {
   return (
-    <section className="flex h-auto full-width-container bg-productBg text-white pl-9">
-      <div className="m-auto py-28 pl-6 pr-2">
+    <section className="flex h-auto full-width-container bg-productBg text-white">
+      <div className="m-auto py-28 pl-28 pr-2 max-[768px]:pl-10">
         <h2 className="font-bold text-5xl max-[768px]:text-4xl">
           Community Meetups
         </h2>

@@ -5,7 +5,7 @@ import GeekImage from "../../public/images/logo.svg";
 function Banner({ data }: { data: any }) {
   return (
     <section className="overflow-x-hidden relative">
-      <div className="container xl:mx-auto px-4 md:px-12 2xl:px-32 flex flex-col justify-center mt-28 md:mt-44 pb-28">
+      <div className="container xl:mx-auto px-7 md:px-12 2xl:px-32 flex flex-col justify-center mt-28 md:mt-44 pb-28">
         <div className="z-10 leading-loose">
           <h1 className="text-6xl lg:text-8xl leading-tight font-extrabold animate-fade">
             {data.header[0]}
