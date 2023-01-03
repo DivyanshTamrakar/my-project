@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 
 function ImageCard({ item }: any) {
-  console.log(item);
   return (
     <div className="flex justify-center cursor-pointer shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 ease-out">
       <div className="rounded-lg shadow-lg bg-white max-w-sm">
