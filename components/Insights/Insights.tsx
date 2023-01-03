@@ -1,5 +1,6 @@
 import React from "react";
 import AnimatedButton from "../button/animatedButton";
+import ImageCard from "../ListItem/card";
 import BlogCard from "./blogCard";
 
 const Insights = ({ data }: { data: any }) => {
@@ -24,7 +25,7 @@ const Insights = ({ data }: { data: any }) => {
         {/* blog cards */}
         <div className=" mt-8 md:mt-20 grid grid-cols-1 mx-2 md:mx-0 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.map((item: any) => {
-            return <BlogCard key={item.id} data={item} />;
+            return <ImageCard key={item.id} item={item} />;
           })}
         </div>
       </div>

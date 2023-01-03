@@ -15,14 +15,15 @@ export const banneQuery = {
 
 export const communityMeetupQuery = {
   query: `
-        query MyQuery {
-          community_meetups {
-            url
-            title
-            description
-            date
-          }
-        }`,
+  query MyQuery {
+    communityMeetups {
+      date
+      description
+      id
+      image
+      title
+    }
+  }`,
 };
 
 export const workQuery = {

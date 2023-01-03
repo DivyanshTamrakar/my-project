@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Button from "../button/button";
+import BlogCard from "../Insights/blogCard";
 import ImageCard from "../ListItem/card";
 
 function CommunityMeetups({ data }: { data: any }) {
   return (
-    <section className="flex h-auto full-width-container bg-productBg text-white">
+    <section className="flex h-auto full-width-container bg-productBg text-white pl-9">
       <div className="m-auto py-28 pl-6 pr-2">
         <h2 className="font-bold text-5xl max-[768px]:text-4xl">
           Community Meetups

@@ -8,7 +8,6 @@ import Footer from "../components/footer/footer";
 import { fetchData } from "../fetchData/fetchData";
 import {
   banneQuery,
-  communitiesQuery,
   communityMeetupQuery,
   insightsQuery,
   sourceProductQuery,
@@ -31,14 +30,13 @@ export const getStaticProps = async () => {
 };
 
 export default function Home(props: any) {
+  console.log(props.insights);
   return (
     <>
       <main>
         <Banner data={props.banner.data.ban_ner[0]} />
         <Insights data={props.insights.data.insights} />
-        <CommunityMeetups
-          data={props.communitymeetups.data.community_meetups}
-        />
+        <CommunityMeetups data={props.communitymeetups.data.communityMeetups} />
         <WhatWeDo data={props.work} />
         <OurProducts data={props.sourceProducts} />
         <LetsBuild />

@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 
 const BlogCard = ({ data }: { data: any }) => {
-  console.log(data);
   return (
     <div className="flex flex-col mt-3 h-full rounded-md cursor-pointer bg-white shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 ease-out">
       {/* image */}
