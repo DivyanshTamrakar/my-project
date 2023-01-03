@@ -1,6 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
+import { formatDate } from "../../helper/formatDate";
 
 const BlogCard = ({ data }: { data: any }) => {
   return (
@@ -29,7 +30,9 @@ const BlogCard = ({ data }: { data: any }) => {
         </div>
 
         {/* date */}
-        <p className="p-0 text-sm text-[#34333a] font-light">{data.date}</p>
+        <p className="p-0 text-sm text-[#34333a] font-light">
+          {formatDate(data.date)}
+        </p>
       </div>
     </div>
   );
