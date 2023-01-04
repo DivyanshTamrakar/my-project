@@ -77,3 +77,18 @@ export const communitiQuery = {
   
    `,
 };
+
+export const footerQuery = {
+  query: `query MyQuery {
+    footer {
+      company
+      enagagement
+      hireDevelopers
+      id
+      quickLinks
+      awards
+    }
+  }
+  
+   `,
+};

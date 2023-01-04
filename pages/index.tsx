@@ -10,6 +10,7 @@ import {
   banneQuery,
   communitiQuery,
   communityMeetupQuery,
+  footerQuery,
   insightsQuery,
   sourceProductQuery,
   workQuery,
@@ -26,6 +27,7 @@ export const getStaticProps = async () => {
   const communities = await fetchData(communitiQuery);
   const sourceProducts = await fetchData(sourceProductQuery);
   const insights = await fetchData(insightsQuery);
+  const footer = await fetchData(footerQuery);
   return {
     props: {
       banner,
@@ -34,6 +36,7 @@ export const getStaticProps = async () => {
       communities,
       sourceProducts,
       insights,
+      footer,
     },
   };
 };
@@ -49,7 +52,7 @@ export default function Home(props: any) {
         <WhatWeDo data={props.work} />
         <OurProducts data={props.sourceProducts} />
         <LetsBuild />
-        <Footer />
+        <Footer data={props.footer.data.footer[0]} />
       </main>
     </>
   );
