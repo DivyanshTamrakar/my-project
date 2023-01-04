@@ -3,11 +3,11 @@ import Image from "next/image";
 
 type Props = {
   name: string;
-  icon: string;
+  image: string;
   bgColor: string;
 };
 
-const CommunitiyCard = ({ item }: any) => {
+const CommunitiyCard = ({ item }: { item: Props }) => {
   return (
     <div>
       {/* div with bg */}

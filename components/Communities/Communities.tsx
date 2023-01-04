@@ -2,7 +2,13 @@ import React from "react";
 import Button from "../button/button";
 import CommunitiyCard from "../CommunityCard/CommunitiyCard";
 
-const Communities = ({ data }: { data: any }) => {
+type AppProps = {
+  name: string;
+  image: string;
+  bgColor: string;
+};
+
+const Communities = ({ data }: { data: AppProps[] }) => {
   return (
     <div className="bg-white pb-16">
       <div className="container xl:mx-auto py-8 md:py-28 px-8 lg:px-20 2xl:px-40">
