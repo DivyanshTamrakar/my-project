@@ -1,9 +1,16 @@
 import React from "react";
 import AnimatedButton from "../button/animatedButton";
 import ImageCard from "../ListItem/card";
-import BlogCard from "./blogCard";
 
-const Insights = ({ data }: { data: any }) => {
+type AppProps = {
+  title: string;
+  image: string;
+  id: number;
+  description: string;
+  date: string;
+};
+
+const Insights = ({ data }: { data: AppProps[] }) => {
   return (
     <div className="bg-zinc-100 pb-16">
       <div className="container xl:mx-auto py-8 md:py-28 px-8 lg:px-20 2xl:px-40">
@@ -24,7 +31,7 @@ const Insights = ({ data }: { data: any }) => {
         </div>
         {/* blog cards */}
         <div className=" mt-8 md:mt-20 grid grid-cols-1 mx-2 md:mx-0 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data.map((item: any) => {
+          {data.map((item: AppProps) => {
             return <ImageCard key={item.id} item={item} />;
           })}
         </div>

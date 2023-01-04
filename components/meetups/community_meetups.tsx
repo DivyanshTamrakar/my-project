@@ -1,9 +1,16 @@
 import React from "react";
 import Button from "../button/button";
-import BlogCard from "../Insights/blogCard";
 import ImageCard from "../ListItem/card";
 
-function CommunityMeetups({ data }: { data: any }) {
+type AppProps = {
+  title: string;
+  image: string;
+  id: number;
+  description: string;
+  date: string;
+};
+
+function CommunityMeetups({ data }: { data: AppProps[] }) {
   return (
     <section className="flex h-auto full-width-container bg-productBg text-white">
       <div className="m-auto py-28 pl-28 pr-2 max-[768px]:pl-10">
@@ -19,8 +26,8 @@ function CommunityMeetups({ data }: { data: any }) {
         <section>
           <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
-              {data.map((item: any, index: number) => {
-                return <ImageCard key={index} item={item} />;
+              {data.map((item: AppProps) => {
+                return <ImageCard key={item.id} item={item} />;
               })}
             </div>
           </div>

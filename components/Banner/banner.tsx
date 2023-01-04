@@ -1,8 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import GeekImage from "../../public/images/logo.svg";
+type AppProps = {
+  button: string;
+  header: string[];
+  id: number;
+  subheading: string;
+  options: string[];
+};
 
-function Banner({ data }: { data: any }) {
+function Banner({ data }: { data: AppProps }) {
   return (
     <section className="overflow-x-hidden relative">
       <div className="container xl:mx-auto px-7 md:px-12 2xl:px-32 flex flex-col justify-center mt-28 md:mt-44 pb-28">

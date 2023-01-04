@@ -51,18 +51,6 @@ export const sourceProductQuery = {
       `,
 };
 
-export const communitiesQuery = {
-  query: `query MyQuery {
-    communities {
-      bgColor
-      icon
-      name
-      id
-    }
-  }
-   `,
-};
-
 export const insightsQuery = {
   query: `query MyQuery {
     insights {
@@ -71,6 +59,19 @@ export const insightsQuery = {
       id
       image
       title
+    }
+  }
+  
+   `,
+};
+
+export const communitiQuery = {
+  query: `query MyQuery {
+    communities {
+      image
+      bgColor
+      id
+      name
     }
   }
   
