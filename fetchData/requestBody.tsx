@@ -87,6 +87,7 @@ export const footerQuery = {
       id
       quickLinks
       awards
+      addresses
     }
   }
   

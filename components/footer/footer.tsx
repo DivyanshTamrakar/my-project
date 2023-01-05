@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { socialIcons } from "../../data/socialIcons";
+import Address from "./address";
 import Awards from "./awards";
 import Brand from "./brand";
 import CopyRight from "./copyright";
@@ -119,134 +120,9 @@ function Footer({ data }: { data: any }) {
 
         {/* addresses */}
         <div className="grid md:grid-cols-3 mt-10 gap-10 pt-12">
-          {/* india */}
-          <div>
-            {/* title */}
-            <h6 className="flex items-center">
-              <Image
-                src="https://geekyants.com/_next/static/images/India-83003bb4d679919eec3d65fb83459007.svg"
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="w-6 mr-2"
-                alt="India"
-              />
-
-              <span className="text-white opacity-70">
-                GeekyAnts India Pvt Ltd
-              </span>
-            </h6>
-
-            {/* address */}
-            <address className="mt-3 text-white opacity-70 text-sm font-normal not-italic">
-              <span className="block leading-6">
-                No. 18, 2nd Cross Road, N S Palya, 2nd Stage
-              </span>
-              <span className="block leading-6">
-                BTM Layout, Bangalore - 560076, Karnataka, India
-              </span>
-              <div className="leading-6 pt-2 flex items-center">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth="0"
-                  viewBox="0 0 512 512"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="rotate-90"
-                >
-                  <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
-                </svg>
-
-                <span className="block px-3"> +91 9595884422</span>
-              </div>
-            </address>
-          </div>
-
-          {/* uk */}
-          <div>
-            {/* title */}
-            <h6 className="flex items-center">
-              <Image
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDUwMCI+PHBhdGggZmlsbD0iIzAwNiIgZD0iTTAgMGgxMDAwLjAydjUwMC4wMUgweiIvPjxwYXRoIGQ9Ik0wIDB2NTUuOTAzbDg4OC4yMTggNDQ0LjEwOWgxMTEuODAyVjQ0NC4xMUwxMTEuODAyIDBIMHptMTAwMC4wMiAwdjU1LjkwMUwxMTEuODAyIDUwMC4wMUgwdi01NS45MDFMODg4LjIxOCAwaDExMS44MDJ6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTQxNi42NzUgMHY1MDAuMDFoMTY2LjY3VjBoLTE2Ni42N3pNMCAxNjYuNjd2MTY2LjY3aDEwMDAuMDJWMTY2LjY3SDB6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTAgMjAwLjAwNHYxMDAuMDAyaDEwMDAuMDJWMjAwLjAwNEgwek00NTAuMDA5IDB2NTAwLjAxaDEwMC4wMDJWMEg0NTAuMDA5ek0wIDUwMC4wMWwzMzMuMzQtMTY2LjY3aDc0LjUzNUw3NC41MzUgNTAwLjAxSDB6TTAgMGwzMzMuMzQgMTY2LjY3aC03NC41MzVMMCAzNy4yN1Ywem01OTIuMTQ1IDE2Ni42N0w5MjUuNDg1IDBoNzQuNTM1TDY2Ni42OCAxNjYuNjdoLTc0LjUzNXptNDA3Ljg3NSAzMzMuMzRMNjY2LjY4IDMzMy4zNGg3NC41MzVsMjU4LjgwNSAxMjkuNDAzdjM3LjI2N3oiIGZpbGw9IiNjMDAiLz48L3N2Zz4="
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="w-6 mr-2"
-                alt="India"
-              />
-
-              <span className="text-white opacity-70">GeekyAnts UK Ltd</span>
-            </h6>
-
-            {/* address */}
-            <address className="mt-3 text-white opacity-70 text-sm font-normal not-italic">
-              <span className="block leading-6">
-                7 Bickleigh House, Frogwell Close, London N15 6ED,
-              </span>
-              <span className="block leading-6">England, UK</span>
-              <div className="leading-6 pt-2 flex items-center">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth="0"
-                  viewBox="0 0 512 512"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="rotate-90"
-                >
-                  <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
-                </svg>
-
-                <span className="block px-3"> 44 7424797407</span>
-              </div>
-            </address>
-          </div>
-
-          {/* us */}
-          <div>
-            {/* title */}
-            <h6 className="flex items-center">
-              <Image
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTIzNSIgaGVpZ2h0PSI2NTAiIHZpZXdCb3g9IjAgMCA3NDEwIDM5MDAiPjxwYXRoIGZpbGw9IiNiMjIyMzQiIGQ9Ik0wIDBoNzQxMHYzOTAwSDB6Ii8+PHBhdGggZD0iTTAgNDUwaDc0MTBtMCA2MDBIMG0wIDYwMGg3NDEwbTAgNjAwSDBtMCA2MDBoNzQxMG0wIDYwMEgwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMzAwIi8+PHBhdGggZmlsbD0iIzNjM2I2ZSIgZD0iTTAgMGgyOTY0djIxMDBIMHoiLz48ZyBmaWxsPSIjZmZmIj48ZyBpZD0iZCI+PGcgaWQ9ImMiPjxnIGlkPSJlIj48ZyBpZD0iYiI+PHBhdGggaWQ9ImEiIGQ9Ik0yNDcgOTBsNzAuNTM0IDIxNy4wODItMTg0LjY2LTEzNC4xNjRoMjI4LjI1M0wxNzYuNDY2IDMwNy4wODJ6Ii8+PHVzZSB4bGluazpocmVmPSIjYSIgeT0iNDIwIi8+PHVzZSB4bGluazpocmVmPSIjYSIgeT0iODQwIi8+PHVzZSB4bGluazpocmVmPSIjYSIgeT0iMTI2MCIvPjwvZz48dXNlIHhsaW5rOmhyZWY9IiNhIiB5PSIxNjgwIi8+PC9nPjx1c2UgeGxpbms6aHJlZj0iI2IiIHg9IjI0NyIgeT0iMjEwIi8+PC9nPjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjQ5NCIvPjwvZz48dXNlIHhsaW5rOmhyZWY9IiNkIiB4PSI5ODgiLz48dXNlIHhsaW5rOmhyZWY9IiNjIiB4PSIxOTc2Ii8+PHVzZSB4bGluazpocmVmPSIjZSIgeD0iMjQ3MCIvPjwvZz48L3N2Zz4="
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="w-6 mr-2"
-                alt="India"
-              />
-
-              <span className="text-white opacity-70">GeekyAnts Inc</span>
-            </h6>
-
-            {/* address */}
-            <address className="mt-3 text-white opacity-70 text-sm font-normal not-italic">
-              <span className="block leading-6">
-                315 Montgomery Street, 9th & 10th Floors,
-              </span>
-              <span className="block leading-6">
-                San Francisco, CA, 94104, USA
-              </span>
-              <div className="leading-6 pt-2 flex items-center">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth="0"
-                  viewBox="0 0 512 512"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="rotate-90"
-                >
-                  <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
-                </svg>
-
-                <span className="block px-3"> +1(415)2759099</span>
-              </div>
-            </address>
-          </div>
+          {data.addresses.map((item: any) => {
+            return <Address key={item.id} data={item} />;
+          })}
         </div>
       </div>
 
