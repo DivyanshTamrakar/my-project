@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { socialIcons } from "../../data/socialIcons";
 import Address from "./address";
 import Awards from "./awards";
 import Brand from "./brand";
@@ -43,8 +42,8 @@ function Footer({ data }: { data: any }) {
 
               {/* social media icons */}
               <div className="flex flex-wrap w-full">
-                {socialIcons.map((item: any, index: number) => {
-                  return <Social key={index} data={item} />;
+                {data.socialIcons.map((item: any, index: number) => {
+                  return <Social key={item.name} data={item} />;
                 })}
               </div>
             </div>

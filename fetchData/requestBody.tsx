@@ -88,6 +88,7 @@ export const footerQuery = {
       quickLinks
       awards
       addresses
+      socialIcons
     }
   }
   
