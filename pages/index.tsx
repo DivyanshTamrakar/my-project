@@ -17,6 +17,9 @@ import {
 } from "../fetchData/requestBody";
 import Insights from "../components/Insights/Insights";
 import Communities from "../components/Communities/Communities";
+import Tech from "../components/Tech/Tech";
+import Carausal from "../components/caraousel/caraousal";
+import Trusted from "../components/trusted/trusted";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,12 +49,15 @@ export default function Home(props: any) {
     <>
       <main>
         <Banner data={props.banner.data.ban_ner[0]} />
-        <Communities data={props.communities.data.communities[0].communities} />
+        <Trusted />
+        <Carausal />
         <Insights data={props.insights.data.insights} />
+        <Communities data={props.communities.data.communities[0].communities} />
         <CommunityMeetups
           data={props.communitymeetups.data.communityMeetup[0].meetups}
         />
         <WhatWeDo data={props.work} />
+        <Tech />
         <OurProducts data={props.sourceProducts} />
         <LetsBuild />
         <Footer data={props.footer.data.footer[0]} />
