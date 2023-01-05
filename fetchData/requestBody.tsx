@@ -89,3 +89,12 @@ export const footerQuery = {
   
    `,
 };
+
+export const partnersQuery = {
+  query: `query MyQuery {
+    trustedPartner {
+      partners
+    }
+  }
+   `,
+};

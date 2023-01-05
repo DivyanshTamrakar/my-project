@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -7,21 +7,7 @@ import { FreeMode } from "swiper";
 import Image from "next/image";
 import { Swiper as SwiperType, Navigation, Autoplay } from "swiper";
 
-const icons = [
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fkhatabook.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fmpl.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fgoogle.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fpaypoint.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fcloud9.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fairops.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fliviit.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Flamno.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fscroll-news.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Famana.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Fmarigold.png&w=3840&q=75",
-  "https://geekyants.com/_next/image/?url=%2Fimages%2Fclient-logo%2Flink.png&w=3840&q=75",
-];
-export default function Caraousel() {
+export default function Caraousel({ data }: { data: string[] }) {
   const swiperRef = useRef<SwiperType>();
   return (
     <div className="flex pl-36 pr-36 max-[768px]:pl-8 max-[768px]:pr-8 flex-row h-auto full-width-container bg-productBg text-white pb-12 px-12">
@@ -39,7 +25,7 @@ export default function Caraousel() {
           delay: 2500,
         }}
       >
-        {icons.map((item: any, index: number) => {
+        {data.map((item: any, index: number) => {
           return (
             <SwiperSlide
               key={index}
