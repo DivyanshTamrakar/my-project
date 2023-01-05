@@ -40,7 +40,7 @@ export default function Caraousel({ data }: { data: string[] }) {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className=" mr-0 bg-productsBackground"
+                  className=" mr-0 bg-productsBackground opacity-50"
                   alt="India"
                 />
               </div>
@@ -50,13 +50,13 @@ export default function Caraousel({ data }: { data: string[] }) {
       </Swiper>
       <div className="flex w-16 justify-between mr-8">
         <button
-          className="font-light text-5xl"
+          className="font-light text-5xl text-arrow"
           onClick={() => swiperRef.current?.slidePrev()}
         >
           &larr;
         </button>
         <button
-          className="font-light text-5xl"
+          className="font-light text-5xl text-arrow"
           onClick={() => swiperRef.current?.slideNext()}
         >
           &rarr;

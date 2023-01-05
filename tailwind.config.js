@@ -17,6 +17,7 @@ module.exports = {
         productText: "#C0C0C4",
         meetupText: "#414141",
         black300: "#343339",
+        arrow: "#9D9C97",
       },
 
       keyframes: {
