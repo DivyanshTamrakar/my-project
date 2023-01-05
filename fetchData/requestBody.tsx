@@ -16,12 +16,8 @@ export const banneQuery = {
 export const communityMeetupQuery = {
   query: `
   query MyQuery {
-    communityMeetups {
-      date
-      description
-      id
-      image
-      title
+    communityMeetup {
+      meetups
     }
   }`,
 };
@@ -68,12 +64,11 @@ export const insightsQuery = {
 export const communitiQuery = {
   query: `query MyQuery {
     communities {
-      image
-      bgColor
+      communities
       id
-      name
     }
   }
+  
   
    `,
 };

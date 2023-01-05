@@ -46,9 +46,11 @@ export default function Home(props: any) {
     <>
       <main>
         <Banner data={props.banner.data.ban_ner[0]} />
-        <Communities data={props.communities.data.communities} />
+        <Communities data={props.communities.data.communities[0].communities} />
         <Insights data={props.insights.data.insights} />
-        <CommunityMeetups data={props.communitymeetups.data.communityMeetups} />
+        <CommunityMeetups
+          data={props.communitymeetups.data.communityMeetup[0].meetups}
+        />
         <WhatWeDo data={props.work} />
         <OurProducts data={props.sourceProducts} />
         <LetsBuild />
