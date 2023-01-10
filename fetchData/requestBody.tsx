@@ -24,14 +24,15 @@ export const communityMeetupQuery = {
 
 export const workQuery = {
   query: `
-    query MyQuery {
-      work {
-        id
-        icon
-        heading
-        description
-      }
+  query MyQuery {
+    whatWeDo {
+      buttonText
+      subheading
+      services
+      heading
     }
+  }
+  
     `,
 };
 

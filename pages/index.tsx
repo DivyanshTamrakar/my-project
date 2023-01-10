@@ -60,7 +60,7 @@ export default function Home(props: any) {
         <CommunityMeetups
           data={props.communitymeetups.data.communityMeetup[0].meetups}
         />
-        <WhatWeDo data={props.work} />
+        <WhatWeDo data={props.work.data.whatWeDo[0]} />
         <Tech />
         <OurProducts data={props.sourceProducts} />
         <LetsBuild />
