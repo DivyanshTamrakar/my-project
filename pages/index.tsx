@@ -12,8 +12,8 @@ import {
   communityMeetupQuery,
   footerQuery,
   insightsQuery,
-  partnersQuery,
   sourceProductQuery,
+  trustedPartnerQuery,
   workQuery,
 } from "../fetchData/requestBody";
 import Insights from "../components/Insights/Insights";
@@ -32,7 +32,8 @@ export const getStaticProps = async () => {
   const sourceProducts = await fetchData(sourceProductQuery);
   const insights = await fetchData(insightsQuery);
   const footer = await fetchData(footerQuery);
-  const partners = await fetchData(partnersQuery);
+
+  const trusted = await fetchData(trustedPartnerQuery);
   return {
     props: {
       banner,
@@ -42,7 +43,7 @@ export const getStaticProps = async () => {
       sourceProducts,
       insights,
       footer,
-      partners,
+      trusted,
     },
   };
 };
@@ -52,8 +53,8 @@ export default function Home(props: any) {
     <>
       <main>
         <Banner data={props.banner.data.ban_ner[0]} />
-        <Trusted />
-        <Carausal data={props.partners.data.trustedPartner[0].partners} />
+        <Trusted data={props.trusted.data.trustedPartner[0]} />
+        <Carausal data={props.trusted.data.trustedPartner[0].partners} />
         <Insights data={props.insights.data.insights} />
         <Communities data={props.communities.data.communities[0].communities} />
         <CommunityMeetups

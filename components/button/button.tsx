@@ -34,7 +34,7 @@ const Button = ({ text }: Props) => {
     <button
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="p-2 translate3d(0,0,0) mr-3 px-6 mt-10 bg-primaryButton md:px-10 rounded bg-primary text-white text-sm md:text-base font-bold"
+      className="p-2 translate3d(0,0,0) mr-3 px-6 mt-10 bg-primaryButton md:px-10 rounded bg-primary text-white text-sm md:text-base font-bold uppercase"
     >
       <div className="flex items-center relative w-fit flex-nowrap whitespace-nowrap">
         <span ref={spanRef} className="transition-all duration-300">

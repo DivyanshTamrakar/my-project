@@ -90,11 +90,14 @@ export const footerQuery = {
    `,
 };
 
-export const partnersQuery = {
+export const trustedPartnerQuery = {
   query: `query MyQuery {
     trustedPartner {
+      buttonText
+      heading
+      id
       partners
+      subheading
     }
-  }
-   `,
+  }`,
 };
