@@ -32,39 +32,46 @@ export const getStaticProps = async () => {
   const sourceProducts = await fetchData(sourceProductQuery);
   const insights = await fetchData(insightsQuery);
   const footer = await fetchData(footerQuery);
-
   const trusted = await fetchData(trustedPartnerQuery);
+
   return {
     props: {
-      banner,
-      communitymeetups,
-      work,
-      communities,
-      sourceProducts,
-      insights,
-      footer,
-      trusted,
+      banner: banner.data.ban_ner[0],
+      communitymeetups: communitymeetups.data.communityMeetup[0].meetups,
+      work: work.data.whatWeDo[0],
+      communities: communities.data.communities[0].communities,
+      sourceProducts: sourceProducts.data.productsAndOpensource[0],
+      insights: insights.data.Insights[0],
+      footer: footer.data.footer[0],
+      trusted: trusted.data.trustedPartner[0],
     },
   };
 };
 
-export default function Home(props: any) {
+export default function Home({
+  banner,
+  trusted,
+  insights,
+  communities,
+  communitymeetups,
+  work,
+  sourceProducts,
+  footer,
+}: any) {
   return (
     <>
       <main>
-        <Banner data={props.banner.data.ban_ner[0]} />
-        <Trusted data={props.trusted.data.trustedPartner[0]} />
-        <Carausal data={props.trusted.data.trustedPartner[0].partners} />
-        <Insights data={props.insights.data.Insights[0]} />
-        <Communities data={props.communities.data.communities[0].communities} />
-        <CommunityMeetups
-          data={props.communitymeetups.data.communityMeetup[0].meetups}
-        />
-        <WhatWeDo data={props.work.data.whatWeDo[0]} />
+        <Banner data={banner} />
+        <Trusted data={trusted} />
+        <Carausal data={trusted.partners} />
+        <Insights data={insights} />
+        <Communities data={communities} />
+        <CommunityMeetups data={communitymeetups} />
+        <WhatWeDo data={work} />
         <Tech />
-        <OurProducts data={props.sourceProducts} />
+        <OurProducts data={sourceProducts} />
         <LetsBuild />
-        <Footer data={props.footer.data.footer[0]} />
+        <Footer data={footer} />
       </main>
     </>
   );

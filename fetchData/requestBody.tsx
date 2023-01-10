@@ -38,13 +38,13 @@ export const workQuery = {
 
 export const sourceProductQuery = {
   query: `query MyQuery {
-        sourceProducts {
-          description
-          heading
-          icon
-          id
-        }
-      }
+    productsAndOpensource {
+      buttonText
+      heading
+      products
+      subheading
+    }
+  }
       `,
 };
 
