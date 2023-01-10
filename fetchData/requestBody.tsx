@@ -49,15 +49,13 @@ export const sourceProductQuery = {
 
 export const insightsQuery = {
   query: `query MyQuery {
-    insights {
-      description
-      date
-      id
-      image
-      title
+    Insights {
+      buttonText
+      heading
+      insightData
+      subheading
     }
-  }
-  
+  }  
    `,
 };
 

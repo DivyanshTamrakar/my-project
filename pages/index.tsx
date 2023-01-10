@@ -55,7 +55,7 @@ export default function Home(props: any) {
         <Banner data={props.banner.data.ban_ner[0]} />
         <Trusted data={props.trusted.data.trustedPartner[0]} />
         <Carausal data={props.trusted.data.trustedPartner[0].partners} />
-        <Insights data={props.insights.data.insights} />
+        <Insights data={props.insights.data.Insights[0]} />
         <Communities data={props.communities.data.communities[0].communities} />
         <CommunityMeetups
           data={props.communitymeetups.data.communityMeetup[0].meetups}

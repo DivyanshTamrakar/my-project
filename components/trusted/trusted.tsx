@@ -9,7 +9,6 @@ type AppProps = {
 };
 
 function Trusted({ data }: { data: AppProps }) {
-  console.log(data);
   return (
     <div className="bg-productsBackground pb-16 text-white">
       <div className="container xl:mx-auto pt-8 md:pt-28 px-8 lg:px-20 2xl:px-40">

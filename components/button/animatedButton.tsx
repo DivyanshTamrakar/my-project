@@ -4,10 +4,10 @@ import Image from "next/image";
 
 type Props = {
   text: string;
-  type?: "tech" | "business";
+  icon: string;
 };
 
-const AnimatedButton = ({ text, type }: Props) => {
+const AnimatedButton = ({ text, icon }: Props) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const spanRef = useRef<HTMLSpanElement>(null);
 
@@ -38,7 +38,7 @@ const AnimatedButton = ({ text, type }: Props) => {
       <button
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="p-2 px-6 md:px-10 text-sm md:text-base font-bold flex justify-between"
+        className="tracking-wide uppercase p-2 px-6 md:px-10 text-sm md:text-base font-bold flex justify-between"
       >
         <div className="flex items-center relative w-fit flex-nowrap whitespace-nowrap">
           <span ref={spanRef} className="transition-all duration-300">
@@ -60,25 +60,14 @@ const AnimatedButton = ({ text, type }: Props) => {
       </button>
 
       <div className="overflow-hidden relative">
-        {type === "tech" ? (
-          <Image
-            src="https://geekyants.com/_next/image/?url=%2Fimages%2Fhashnode-icon.png&w=64&q=75"
-            width="0"
-            height="0"
-            sizes="100vw"
-            alt="hashnode logo"
-            className="relative -right-[1px] -bottom-4 opacity-60 w-max h-max"
-          />
-        ) : (
-          <Image
-            src="https://geekyants.com/images/geekyants-icon.svg"
-            width="0"
-            height="0"
-            sizes="100vw"
-            alt="hashnode logo"
-            className="relative -right-[1px] -bottom-[4px] opacity-60 w-full h-full"
-          />
-        )}
+        <Image
+          src={icon}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="hashnode logo"
+          className="relative -right-[1px] -bottom-[4px] opacity-60 w-full h-full"
+        />
       </div>
     </div>
   );
