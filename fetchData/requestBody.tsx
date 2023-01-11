@@ -76,13 +76,17 @@ export const footerQuery = {
   query: `query MyQuery {
     footer {
       company
-      enagagement
-      hireDevelopers
+      engagement
       id
-      quickLinks
+      quicklinks
       awards
       addresses
-      socialIcons
+      socialConnect
+      hireDevelopersComponent
+      image
+      subheading
+      certificate
+      copyright
     }
   }
   
