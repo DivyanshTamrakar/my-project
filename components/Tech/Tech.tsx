@@ -3,7 +3,7 @@ import TechTabs from "./TechTabs";
 import Button from "../button/button";
 import TechCards from "./TechCards";
 
-const Tech = () => {
+const Tech = ({ data }: { data: any }) => {
   const [activeTab, setActiveTab] = useState<string>("Top");
 
   const handleTabClick = (tab: string) => {
@@ -14,25 +14,27 @@ const Tech = () => {
     <div className="bg-zinc-100 pb-16">
       <div className="container xl:mx-auto py-8 md:py-28 px-8 lg:px-20 2xl:px-40">
         {/* title */}
-        <h1 className="text-4xl md:text-5xl font-bold">Tech We Love</h1>
+        <h1 className="text-4xl md:text-5xl font-bold">{data.heading}</h1>
 
         {/* description */}
-        <p className="font-light text-xl my-3">
-          Made out of our love for experiments or out of sheer necessity to
-          solve problems in the development sphere, our open source
-          contributions and products are built for you.
+        <p className="font-light text-xl my-4 tracking-wide">
+          {data.subheading}
         </p>
 
         {/* button */}
-        <div className="mt-12">
-          <Button text="LET'S TALK" />
+        <div className="mt-5">
+          <Button text={data.buttonText} />
         </div>
 
         {/* tabs */}
-        <TechTabs activeTab={activeTab} handleTabClick={handleTabClick} />
+        <TechTabs
+          activeTab={activeTab}
+          handleTabClick={handleTabClick}
+          categories={data.categories}
+        />
 
         {/* tech cards */}
-        <TechCards activeTab={activeTab} />
+        <TechCards activeTab={activeTab} data={data} />
       </div>
     </div>
   );

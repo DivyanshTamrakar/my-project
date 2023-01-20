@@ -104,3 +104,21 @@ export const trustedPartnerQuery = {
     }
   }`,
 };
+
+export const techWeLoveQuery = {
+  query: `query MyQuery {
+    techWeLove {
+      buttonText
+      heading
+      subheading
+      categories
+      id
+      top
+      mobile
+      testing
+      web
+      design
+      backend
+    }
+  }`,
+};

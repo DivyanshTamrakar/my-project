@@ -13,7 +13,6 @@ import List from "./quickLinks";
 import Social from "./social";
 
 function Footer({ data }: { data: AppProps }) {
-  console.log(data);
   return (
     <footer className="bg-black pt-8 md:pt-20">
       <div className="container xl:mx-auto mb-12 px-8 lg:px-20 2xl:px-40">

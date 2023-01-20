@@ -1,25 +1,39 @@
 import React, { useState, useEffect, use } from "react";
-import { web, mobile } from "../../data/tech";
 
 import TechCard from "./TechCard";
 
 type Props = {
   activeTab: string;
+  data: any;
 };
 
-const TechCards = ({ activeTab }: Props) => {
-  const [tech, setTech] = useState<{ name: string; icon: string }[]>([]);
+const TechCards = ({ activeTab, data }: Props) => {
+  const [tech, setTech] = useState<{ name: string; icon: string }[]>(
+    data.mobile
+  );
 
   useEffect(() => {
     switch (activeTab) {
+      case "Top":
+        setTech(data.top);
+        break;
       case "Web":
-        setTech(web);
+        setTech(data.web);
         break;
       case "Mobile":
-        setTech(mobile);
+        setTech(data.mobile);
+        break;
+      case "Design":
+        setTech(data.design);
+        break;
+      case "Testing":
+        setTech(data.testing);
+        break;
+      case "Backend":
+        setTech(data.backend);
         break;
       default:
-        setTech(web);
+        setTech(data.top);
     }
   }, [activeTab]);
 

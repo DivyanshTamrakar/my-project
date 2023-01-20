@@ -13,6 +13,7 @@ import {
   footerQuery,
   insightsQuery,
   sourceProductQuery,
+  techWeLoveQuery,
   trustedPartnerQuery,
   workQuery,
 } from "../fetchData/requestBody";
@@ -33,6 +34,7 @@ export const getStaticProps = async () => {
   const insights = await fetchData(insightsQuery);
   const footer = await fetchData(footerQuery);
   const trusted = await fetchData(trustedPartnerQuery);
+  const techWeLove = await fetchData(techWeLoveQuery);
 
   return {
     props: {
@@ -44,6 +46,7 @@ export const getStaticProps = async () => {
       insights: insights.data.Insights[0],
       footer: footer.data.footer[0],
       trusted: trusted.data.trustedPartner[0],
+      techWeLove: techWeLove.data.techWeLove[0],
     },
   };
 };
@@ -57,6 +60,7 @@ export default function Home({
   work,
   sourceProducts,
   footer,
+  techWeLove,
 }: any) {
   return (
     <>
@@ -68,7 +72,7 @@ export default function Home({
         <Communities data={communities} />
         <CommunityMeetups data={communitymeetups} />
         <WhatWeDo data={work} />
-        <Tech />
+        <Tech data={techWeLove} />
         <OurProducts data={sourceProducts} />
         <LetsBuild />
         <Footer data={footer} />

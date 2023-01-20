@@ -4,17 +4,11 @@ import TechTabButton from "./TechTabButton";
 type Props = {
   activeTab: string;
   handleTabClick: (tab: string) => void;
+  categories: string[];
 };
 
-const TechTabs = ({ activeTab, handleTabClick }: Props) => {
-  const [tabs, setTabs] = useState<string[]>([
-    "Top",
-    "Web",
-    "Mobile",
-    "Back-end",
-    "Design",
-    "Testing",
-  ]);
+const TechTabs = ({ activeTab, handleTabClick, categories }: Props) => {
+  const [tabs, setTabs] = useState<string[]>(categories);
 
   return (
     <div className="mt-20 mb-10">
