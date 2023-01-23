@@ -18,7 +18,8 @@ type AppProps = {
 
 function WhatWeDo({ data }: { data: AppProps }) {
   return (
-    <div className="flex h-auto full-width-container">
+    <div className="flex h-auto full-width-container relative">
+      <div className="bg-gradient-red"></div>
       <div className="m-auto py-28 pl-6 pr-2">
         <h2 className="font-bold text-5xl max-[768px]:text-4xl">
           {data.heading}

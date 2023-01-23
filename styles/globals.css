@@ -60,3 +60,21 @@ body {
 .swiper-button-prev {
     visibility: hidden;
 }
+
+.bg-gradient-red:after {
+    content: "";
+    clip-path: polygon(100% 55%, 0 100%, 100% 100%);
+
+    background: transparent linear-gradient(#f205e9 0%, #e60a0a 100%) 0% 0%;
+    position: absolute;
+    right: 0;
+    width: 547px;
+    height: 447px;
+    bottom: 0;
+
+    @media screen and (max-width: 991px) {
+        height: 200px;
+        width: 320px;
+    }
+
+}
